@@ -1,5 +1,5 @@
 ---
-title: Upcoming Event
+title: Upcoming Events
 description: Events coming up in January
 date: 2024-12-26T13:41:42.721Z
 ---
