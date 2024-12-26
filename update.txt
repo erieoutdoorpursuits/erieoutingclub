@@ -1,0 +1,15 @@
+
+
+
+erieoutdoorpursuits
+
+password
+
+Devoper settng- token
+
+
+git add --all
+
+git commit -m "update Erie Outing Club"
+
+git push -u origin main

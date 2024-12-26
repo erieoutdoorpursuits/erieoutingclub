@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Erie Outing Club</title>
+        <link
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            rel="stylesheet">
+        <style>
+            .jumbotron {
+                background-color: #007bff;
+                color: white;
+                text-align: center;
+            }
+            iframe {
+                border: 0;
+                width: 100%;
+                height: 600px;
+            }
+        </style>
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    </head>
+    <body>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Erie Outing Club</a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home
+                            <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            href="https://www.erieoutdoorpursuits.info/eoc_membership_app/eoc-membership-app.pdf"
+                            target="_blank">Membership App</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://erieoutingclub.org/wp/" target="_blank">Official EOC Page</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="jumbotron">
+            <h1 class="display-4">Welcome to the Erie Outing Club</h1>
+            <p class="lead">Join us for outdoor adventures in the Erie PA area and beyond.</p>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h3>Get Involved</h3>
+                    <p>Download our membership application to join our club:</p>
+                    <a
+                        href="https://www.erieoutdoorpursuits.info/eoc_membership_app/eoc-membership-app.pdf"
+                        target="_blank"
+                        class="btn btn-primary">Membership App</a>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="text-center">Upcoming Events</h3>
+                    <iframe
+                        src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&bgcolor=%23ffffff&mode=AGENDA&src=OTE5NGE1MzQyMzYxZmJmNjY4ZWQyZjhlZGZhY2U1YmNjMjQ4OGFkNjYzNGVmYTg4Mzg1MzFhYjNhNzk0ZDU5MUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23AD1457"
+                        style="border:solid 1px #777"
+                        width="800"
+                        height="600"
+                        frameborder="0"
+                        scrolling="no"></iframe>
+                </div>
+                <div class="col-md-3">
+                    <div style=" margin-bottom: 50px;">
+                        <h3>More Information</h3>
+                        <p>Visit our official website for more details:</p>
+                        <a
+                            href="https://erieoutingclub.org/wp/"
+                            target="_blank"
+                            class="btn btn-secondary">Official EOC Page</a>
+                        <br>
+                    </div>
+                    <div><p>H﻿ello this is my third post that I am writing</p>
+</div>
+                </div>
+
+            </div>
+        </div>
+
+        <footer class="bg-light text-center text-lg-start mt-5">
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+                A social, non-competitive Outdoors Club for adults, who participate in all kinds
+                of outdoor activities. They schedule outdoor activities throughout the year,
+                generally in the Erie PA area and surrounding counties, including western NY and
+                northeast Ohio. We mostly go camping, hiking, backpacking, cycling, and
+                kayaking; in the wintertime, we cross-country ski and snowshoe but are open to
+                doing other activities as well. They enjoy socializing and will sometimes get
+                something to eat after an event.
+            </div>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="/admin/netlify-cms.js"></script>
+        <script>
+            if (window.netlifyIdentity) {
+                window
+                    .netlifyIdentity
+                    .on("init", (user) => {
+                        if (!user) {
+                            window
+                                .netlifyIdentity
+                                .on("login", () => {
+                                    document.location.href = "/admin/";
+                                });
+                        }
+                    });
+            }
+        </script>
+    </body>
+</html>
