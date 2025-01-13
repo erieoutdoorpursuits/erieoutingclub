@@ -61,24 +61,60 @@
 
         <div class="container">
             <div class="row">
+            <!-- left column -->
                 <div class="col-md-3">
-                    <h3>Get Involved</h3>
-                    <p>Download our membership application to join our club:</p>
-                    <a
-                        href="https://www.erieoutdoorpursuits.info/eoc_membership_app/eoc-membership-app.pdf"
-                        target="_blank"
-                        class="btn btn-primary">Membership App</a>
+                   <ul>
+                        <li class="nav-item">
+                            <h2>
+                                <a class="nav-link" href="#" onclick="showSection('section1')">Events Calendar</a>
+                            </h2>
+                        </li>
+                        <li class="nav-item">
+                            <h2>
+                                <a class="nav-link" href="#" onclick="showSection('section2')">About the Club</a>
+                            </h2>
+                        </li>
+                        <li class="nav-item">
+                            <h2>
+                                <a class="nav-link" href="#" onclick="showSection('section3')">News and Events</a>
+                            </h2>
+                        </li>
+                         </ul>
+                    
                 </div>
-                <div class="col-md-6">
+                 <!-- center column -->
+                <div class="col-md-6" id ="main-content">
                     <h3 class="text-center">Upcoming Events</h3>
-                    <iframe
-                        src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&bgcolor=%23ffffff&mode=AGENDA&src=OTE5NGE1MzQyMzYxZmJmNjY4ZWQyZjhlZGZhY2U1YmNjMjQ4OGFkNjYzNGVmYTg4Mzg1MzFhYjNhNzk0ZDU5MUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23AD1457"
-                        style="border:solid 1px #777"
-                        width="800"
-                        height="600"
-                        frameborder="0"
-                        scrolling="no"></iframe>
+                    <!-- section 1 -->
+                      <div id="section1" style="display:block;">
+                        <h3>Event Calendar</h3>
+                        <iframe
+                            src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&bgcolor=%23ffffff&mode=AGENDA&src=OTE5NGE1MzQyMzYxZmJmNjY4ZWQyZjhlZGZhY2U1YmNjMjQ4OGFkNjYzNGVmYTg4Mzg1MzFhYjNhNzk0ZDU5MUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23AD1457"
+                            style="border:solid 1px #777"
+                            width="800"
+                            height="600"
+                            frameborder="0"
+                            scrolling="no"></iframe>
+
+                    </div>
+                    <!-- section 2 -->
+                    <div id="section2" style="display:none;">
+                    <h3>About the Club</h3>
+                    <p>
+                      We are a social, non-competitive Outdoors Club for adults (or a teen accompanied by an adult).  We participate in all kinds of outdoor activities. We schedule outdoor activities throughout the year, generally in the Erie, PA area and surrounding counties, including western NY and northeast Ohio.  
+  We mostly like to go hiking, bicycling, kayaking, camping, and backpacking; during the wintertime we hike, cross-country ski and snowshoe but are open to doing other activities as well.  We enjoy socializing and will sometimes get something to eat after an event.    
+                    </p>
+
+                    </div>
+                    <!-- section-2 -->
+                    <div id="section3" style="display:none;">
+                    <h3>Section 3 Content</h3>
+                    <p>This is the content for Section 3.</p>
+                    <h2>Under-Construction<h2>
                 </div>
+                   
+                </div>
+                <!--  right column -->
                 <div class="col-md-3">
                     <div style=" margin-bottom: 50px;">
                         <h3>More Information</h3>
@@ -89,6 +125,16 @@
                             class="btn btn-secondary">Official EOC Page</a>
                         <br>
                     </div>
+                    <div style=" margin-bottom: 50px;">
+                      <h3>Get Involved</h3>
+                    <p>Download our membership application to join our club:</p>
+                    <a
+                        href="https://www.erieoutdoorpursuits.info/eoc_membership_app/eoc-membership-app.pdf"
+                        target="_blank"
+                        class="btn btn-primary">Membership App</a>
+                    </div>
+
+                  
                     <div>
 <h2>Erie Outing Club Blog</h2>
 
@@ -98,6 +144,9 @@
 <ul>
 
 <h2><a href="/post_1/">Welcome to our Club</a></h2>
+<p>Some information about  the club</p>
+
+<h2><a href="/post_2/">Upcoming Events</a></h2>
 <p>Some information about  the club</p>
 
 </ul>
@@ -140,5 +189,17 @@
                     });
             }
         </script>
+        <!-- Write your comments here -->
+        <!-- js script for links -->
+        <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('#main-content > div').forEach(function(section) {
+                section.style.display = 'none';
+            });
+            // Show the selected section
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
     </body>
 </html>
