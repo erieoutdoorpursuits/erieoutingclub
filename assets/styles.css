@@ -35,4 +35,11 @@ body {
   a:hover {
     text-decoration: underline;
   }
+
+
+  .textsize {
+  
+    font-size: 1.3rem;
+    background-color: blue;
+  }
   
