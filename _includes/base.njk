@@ -55,15 +55,15 @@
         </nav>
 
         <div class="jumbotron">
-            <h1 class="display-4">Welcome to the Erie Outing Club</h1>
+            <h1 class="display-4">The Unofficial Erie Outing Club web site</h1>
             <p class="lead">Join us for outdoor adventures in the Erie PA area and beyond.</p>
         </div>
 
         <div class="container">
             <div class="row">
-            <!-- left column -->
+                <!-- left column -->
                 <div class="col-md-3">
-                   <ul>
+                    <ul>
                         <li class="nav-item">
                             <h2>
                                 <a class="nav-link" href="#" onclick="showSection('section1')">Events Calendar</a>
@@ -79,14 +79,14 @@
                                 <a class="nav-link" href="#" onclick="showSection('section3')">News and Events</a>
                             </h2>
                         </li>
-                         </ul>
-                    
+                    </ul>
+
                 </div>
-                 <!-- center column -->
-                <div class="col-md-6" id ="main-content">
+                <!-- center column -->
+                <div class="col-md-6" id="main-content">
                     <h3 class="text-center">Upcoming Events</h3>
                     <!-- section 1 -->
-                      <div id="section1" style="display:block;">
+                    <div id="section1" style="display:block;">
                         <h3>Event Calendar</h3>
                         <iframe
                             src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&bgcolor=%23ffffff&mode=AGENDA&src=OTE5NGE1MzQyMzYxZmJmNjY4ZWQyZjhlZGZhY2U1YmNjMjQ4OGFkNjYzNGVmYTg4Mzg1MzFhYjNhNzk0ZDU5MUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23AD1457"
@@ -99,22 +99,37 @@
                     </div>
                     <!-- section 2 -->
                     <div id="section2" style="display:none;">
-                    <h3>About the Club</h3>
-                    <p>
-                      We are a social, non-competitive Outdoors Club for adults (or a teen accompanied by an adult).  We participate in all kinds of outdoor activities. We schedule outdoor activities throughout the year, generally in the Erie, PA area and surrounding counties, including western NY and northeast Ohio.  
-  We mostly like to go hiking, bicycling, kayaking, camping, and backpacking; during the wintertime we hike, cross-country ski and snowshoe but are open to doing other activities as well.  We enjoy socializing and will sometimes get something to eat after an event.    
-                    </p>
+                        <h3>About the Club</h3>
+                        <p>
+                            We are a social, non-competitive Outdoors Club for adults (or a teen accompanied
+                            by an adult). We participate in all kinds of outdoor activities. We schedule
+                            outdoor activities throughout the year, generally in the Erie, PA area and
+                            surrounding counties, including western NY and northeast Ohio. We mostly like to
+                            go hiking, bicycling, kayaking, camping, and backpacking; during the wintertime
+                            we hike, cross-country ski and snowshoe but are open to doing other activities
+                            as well. We enjoy socializing and will sometimes get something to eat after an
+                            event.
+                        </p>
 
                     </div>
-                    <!-- section-2 -->
+                    <!-- section-3 -->
                     <div id="section3" style="display:none;">
-                    <h3>Section 3 Content</h3>
-                    <p>This is the content for Section 3.</p>
-                    <h2>Under-Construction<h2>
+                    <div id="embedded-content"></div>
+
+                        <div>
+                            <ul>
+                                {% for post in collections.post %}
+                                    <h2>
+                                        <a href="{{ post.url }}" class="embed-link">{{ post.data.title }}</a>
+                                    </h2>
+                                    <p>{{ post.data.decription }}</p>
+                                {% endfor %}
+                            </ul>
                 </div>
-                   
+                    </div>
+
                 </div>
-                <!--  right column -->
+                <!-- right column -->
                 <div class="col-md-3">
                     <div style=" margin-bottom: 50px;">
                         <h3>More Information</h3>
@@ -126,17 +141,13 @@
                         <br>
                     </div>
                     <div style=" margin-bottom: 50px;">
-                      <h3>Get Involved</h3>
-                    <p>Download our membership application to join our club:</p>
-                    <a
-                        href="https://www.erieoutdoorpursuits.info/eoc_membership_app/eoc-membership-app.pdf"
-                        target="_blank"
-                        class="btn btn-primary">Membership App</a>
-                    </div>
-
-                  
-                    <div>{{ content | safe }}</div>
-                </div>
+                        <h3>Get Involved</h3>
+                        <p>Download our membership application to join our club:</p>
+                        <a
+                            href="assets/eoc-membership-app.pdf"
+                            target="_blank"
+                            class="btn btn-primary">Membership App</a>
+                   
 
             </div>
         </div>
@@ -177,14 +188,38 @@
         <!-- Write your comments here -->
         <!-- js script for links -->
         <script>
-        function showSection(sectionId) {
-            // Hide all sections
-            document.querySelectorAll('#main-content > div').forEach(function(section) {
-                section.style.display = 'none';
-            });
-            // Show the selected section
-            document.getElementById(sectionId).style.display = 'block';
-        }
-    </script>
+            function showSection(sectionId) {
+                // Hide all sections
+                document
+                    .querySelectorAll('#main-content > div')
+                    .forEach(function (section) {
+                        section.style.display = 'none';
+                    });
+                // Show the selected section
+                document
+                    .getElementById(sectionId)
+                    .style
+                    .display = 'block';
+            }
+        </script>
+        <script>
+    const embedLinks = document.querySelectorAll('.embed-link');
+    const embedContent = document.getElementById('embedded-content');
+
+    embedLinks.forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault(); // Prevent default link behavior
+
+            const iframe = document.createElement('iframe');
+            iframe.src = link.getAttribute('href');
+            iframe.width = "100%"; // Adjust width as needed
+            iframe.height = "500px"; // Adjust height as needed
+
+            embedContent.innerHTML = ''; // Clear previous content (if any)
+            embedContent.appendChild(iframe);
+        });
+    });
+</script>
+
     </body>
 </html>

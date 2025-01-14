@@ -1,9 +1,9 @@
 ---
-title: Welcome to our Club
-date: 2023-10-01T00:00:00.000Z
+title: About Website
+date: 2024-01-14
 decription: Some information about  the club
 layout: post.njk
 ---
 <h2>{{ title }}</h2>
 
-They are a social, non-competitive Outdoors Club for adults (or a teen accompanied by an adult).  We participate in all kinds of outdoor activities. We schedule outdoor activities throughout the year, generally in the Erie, PA area and surrounding counties, including western NY and northeast Ohio. They do mostly Cross-Country Skiing, Snow shoeing, hiking, bicycle riding, and backpacking and hiking.
+ ## This is the  unofficial version of the Outing Club. This web site has the event calendar enbedded into the website, you don't have to click on a link to view the calendar. The  links on the left column only change the content of the middle column. The Links on the right column will create new tabs on your web browser. The links the membership app and link to the official page.
