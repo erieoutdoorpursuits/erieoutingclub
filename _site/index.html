@@ -2,8 +2,28 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="A brief description of your webpage content.">
+        <meta name="keywords" content="erieoutingclub, erie, erie outdoors">
+        <meta property="og:title" content="Erie Outing Club">
+        <meta
+            property="og:description"
+            content="A social outdoor club who live in Erie, Pa">
+        <meta property="og:image" content="URL to your image">
+        <meta
+            property="og:url"
+            content="https://erieoutingclub.erieoutdoorpursuits.net/">
+
         <title>Erie Outing Club</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Facebook Meta Tags -->
+        <meta property="og:url" content="https://www.erieoutdoorpursuits.net"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="Blank Page"/>
+        <meta
+            property="og:description"
+            content="This is a blank page with Facebook meta-data."/>
+        <meta property="og:image" content="https://i.imgur.com/XphzYa5.jpg"/>
         <link
             href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
             rel="stylesheet">
@@ -24,7 +44,7 @@
     <body>
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Erie Outing Club</a>
+            <a class="navbar-brand" href="https://erieoutingclub.erieoutdoorpursuits.net/">Erie Outing Club</a>
             <button
                 class="navbar-toggler"
                 type="button"
@@ -114,7 +134,7 @@
                     </div>
                     <!-- section-3 -->
                     <div id="section3" style="display:none;">
-                    <div id="embedded-content"></div>
+                        <div id="embedded-content"></div>
 
                         <div>
                             <ul>
@@ -130,7 +150,7 @@
                                     <p>Some information about  the club</p>
                                 
                             </ul>
-                </div>
+                        </div>
                     </div>
 
                 </div>
@@ -148,84 +168,82 @@
                     <div style=" margin-bottom: 50px;">
                         <h3>Get Involved</h3>
                         <p>Download our membership application to join our club:</p>
-                        <a
-                            href="assets/eoc-membership-app.pdf"
-                            target="_blank"
-                            class="btn btn-primary">Membership App</a>
-                   
+                        <a href="assets/eoc-membership-app.pdf" target="_blank" class="btn btn-primary">Membership App</a>
 
-            </div>
-        </div>
+                    </div>
+                </div>
 
-        <footer class="bg-light text-center text-lg-start mt-5">
-            <div class="text-center p-3 textsize" style="background-color: rgba(0, 0, 0, 0.05); font-size: 1.3rem;">
-            <p>
-                A social, non-competitive Outdoors Club for adults, who participate in all kinds
-                of outdoor activities. They schedule outdoor activities throughout the year,
-                generally in the Erie PA area and surrounding counties, including western NY and
-                northeast Ohio. We mostly go camping, hiking, backpacking, cycling, and
-                kayaking; in the wintertime, we cross-country ski and snowshoe but are open to
-                doing other activities as well. They enjoy socializing and will sometimes get
-                something to eat after an event.</p>
-            </div>
-        </footer>
+                <footer class="bg-light text-center text-lg-start mt-5">
+                    <div
+                        class="text-center p-3 textsize"
+                        style="background-color: rgba(0, 0, 0, 0.05); font-size: 1.3rem;">
+                        <p>
+                            A social, non-competitive Outdoors Club for adults, who participate in all kinds
+                            of outdoor activities. They schedule outdoor activities throughout the year,
+                            generally in the Erie PA area and surrounding counties, including western NY and
+                            northeast Ohio. We mostly go camping, hiking, backpacking, cycling, and
+                            kayaking; in the wintertime, we cross-country ski and snowshoe but are open to
+                            doing other activities as well. They enjoy socializing and will sometimes get
+                            something to eat after an event.</p>
+                    </div>
+                </footer>
 
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script
-            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-        <script
-            src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <script src="/admin/netlify-cms.js"></script>
-        <script>
-            if (window.netlifyIdentity) {
-                window
-                    .netlifyIdentity
-                    .on("init", (user) => {
-                        if (!user) {
-                            window
-                                .netlifyIdentity
-                                .on("login", () => {
-                                    document.location.href = "/admin/";
-                                });
-                        }
+                <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+                <script
+                    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+                <script
+                    src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+                <script src="/admin/netlify-cms.js"></script>
+                <script>
+                    if (window.netlifyIdentity) {
+                        window
+                            .netlifyIdentity
+                            .on("init", (user) => {
+                                if (!user) {
+                                    window
+                                        .netlifyIdentity
+                                        .on("login", () => {
+                                            document.location.href = "/admin/";
+                                        });
+                                }
+                            });
+                    }
+                </script>
+                <!-- Write your comments here -->
+                <!-- js script for links -->
+                <script>
+                    function showSection(sectionId) {
+                        // Hide all sections
+                        document
+                            .querySelectorAll('#main-content > div')
+                            .forEach(function (section) {
+                                section.style.display = 'none';
+                            });
+                        // Show the selected section
+                        document
+                            .getElementById(sectionId)
+                            .style
+                            .display = 'block';
+                    }
+                </script>
+                <script>
+                    const embedLinks = document.querySelectorAll('.embed-link');
+                    const embedContent = document.getElementById('embedded-content');
+
+                    embedLinks.forEach(link => {
+                        link.addEventListener('click', (event) => {
+                            event.preventDefault(); // Prevent default link behavior
+
+                            const iframe = document.createElement('iframe');
+                            iframe.src = link.getAttribute('href');
+                            iframe.width = "100%"; // Adjust width as needed
+                            iframe.height = "500px"; // Adjust height as needed
+
+                            embedContent.innerHTML = ''; // Clear previous content (if any)
+                            embedContent.appendChild(iframe);
+                        });
                     });
-            }
-        </script>
-        <!-- Write your comments here -->
-        <!-- js script for links -->
-        <script>
-            function showSection(sectionId) {
-                // Hide all sections
-                document
-                    .querySelectorAll('#main-content > div')
-                    .forEach(function (section) {
-                        section.style.display = 'none';
-                    });
-                // Show the selected section
-                document
-                    .getElementById(sectionId)
-                    .style
-                    .display = 'block';
-            }
-        </script>
-        <script>
-    const embedLinks = document.querySelectorAll('.embed-link');
-    const embedContent = document.getElementById('embedded-content');
+                </script>
 
-    embedLinks.forEach(link => {
-        link.addEventListener('click', (event) => {
-            event.preventDefault(); // Prevent default link behavior
-
-            const iframe = document.createElement('iframe');
-            iframe.src = link.getAttribute('href');
-            iframe.width = "100%"; // Adjust width as needed
-            iframe.height = "500px"; // Adjust height as needed
-
-            embedContent.innerHTML = ''; // Clear previous content (if any)
-            embedContent.appendChild(iframe);
-        });
-    });
-</script>
-
-    </body>
-</html>
+            </body>
+        </html>
